@@ -1,0 +1,6 @@
+name: Temperature
+description: This app uses a Modulino Thermo to get the temperature and humidity, present it on the built in LED Matrix, and expose it over HTTP
+ports: []
+bricks:
+- arduino:web_ui: {}
+icon: 😀
