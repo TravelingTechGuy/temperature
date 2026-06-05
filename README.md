@@ -6,6 +6,9 @@ It then sends the temperature (in both C, and F), and the humidity back to Pytho
 
 ## Web Interface
 The Python application serves a responsive web dashboard at `http://<localhost>:7000/`.
+
+<img src="assets/doc_assets/webUI.png" alt="Web UI Screenshot" />
+
 - **Displays**: Current temperature (in both °C and °F), current humidity, and the time of the last measurement.
 - **History Chart**: A real-time updating chart showing the last 4 hours of temperature and humidity data (updated every 10 minutes).
 - **Controls**: A toggle button allows users to change the temperature units (°C or °F) displayed on the physical Modulino LED matrix.
