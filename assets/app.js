@@ -1,4 +1,4 @@
-const FETCH_INTERVAL_MS = 10 * 60 * 1000; // 10 minutes
+const FETCH_INTERVAL_MS = 5 * 60 * 1000; // 5 minutes
 
 let historyChart;
 const chartData = {
@@ -88,8 +88,8 @@ async function fetchData() {
     chartData.datasets[0].data.push(data.celsius);
     chartData.datasets[1].data.push(data.humidity);
 
-    // Keep at most 24 slices (4 hours of history)
-    if (chartData.labels.length > 24) {
+    // Keep at most 48 slices (4 hours of history)
+    if (chartData.labels.length > 48) {
       chartData.labels.shift();
       chartData.datasets[0].data.shift();
       chartData.datasets[1].data.shift();
@@ -126,5 +126,5 @@ window.onload = () => {
   initChart();
   fetchData(); // Initial immediate fetch
   fetchUnits(); // Fetch current units for the button
-  setInterval(fetchData, FETCH_INTERVAL_MS); // Then run every 10 minutes
+  setInterval(fetchData, FETCH_INTERVAL_MS); // Then run every 5 minutes
 };
