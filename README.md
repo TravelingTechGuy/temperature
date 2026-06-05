@@ -1,4 +1,4 @@
-# 😀 Temperature
+# 🌡️ Temperature
 This app uses a Modulino Thermo to get the temperature in Celsius, and present it on the built in LED Matrix.
 It then sends the temperature (in both C, and F), and the humidity back to Python.
 
