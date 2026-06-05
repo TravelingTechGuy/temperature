@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Load Chart.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Modulino Thermo Dashboard</h1>
+        <p id="timestamp">Last measurement: Loading...</p>
+    </header>
+
+    <div class="container flex-col">
+        <div class="card full-width" id="temperature-card">
+            <h2>Temperature</h2>
+            <div id="temperature-display" class="value-display">--°C / --°F</div>
+            <div class="unit-toggle-container">
+                <span>Units shown on device: </span>
+                <button id="unit-toggle" onclick="toggleUnits()">--</button>
+            </div>
+        </div>
+        <div class="card full-width" id="humidity-card">
+            <h2>Humidity</h2>
+            <div id="humidity-display" class="value-display-small">--%</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card chart-card">
+            <canvas id="historyChart"></canvas>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
