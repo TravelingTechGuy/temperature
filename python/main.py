@@ -1,5 +1,4 @@
 import time
-import random
 from datetime import datetime, timezone
 from arduino.app_utils import App, Bridge
 from arduino.app_bricks.web_ui import WebUI
